@@ -1,0 +1,27 @@
+ul{
+    list-style-type: none;
+    margin: 0px;
+    display: flex;
+}
+
+ul li{
+    position: relative;
+    display: block;
+}
+
+a,button{
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    background-color: var(--base-color);
+    border: none;
+}
+
+span{
+    display: block;
+    margin-left: 7px;
+}
+
+.log_out_svg{
+    transform: rotate(180deg);
+}

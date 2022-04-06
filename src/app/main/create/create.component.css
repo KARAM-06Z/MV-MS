@@ -1,0 +1,232 @@
+input[type=file]{
+    display: none;
+}
+
+.create_content{
+    display: flex;
+    width: 1352px;
+    margin: 40px auto;
+}
+
+.image_preview_wrapper{
+    width: 308px;
+    height: 308px;
+}
+
+.image_preview_wrapper img{
+    width: 308px;
+    height: 308px;
+    object-fit: cover;
+}
+
+.selectedImages{
+    width: 308px;
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selectedImage_wrapper{
+    position: relative;
+    margin-right: 14.5px;
+}
+
+.selectedImage_wrapper:nth-child(4n){
+    margin-right: 0px;
+}
+
+.selectedImage{
+    background-color: transparent;
+    border: none;
+    border: 1px var(--light-grey) solid;
+    margin-bottom: 14.5px;
+}
+
+.selectedImage img{
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+.uplaod_image_btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    width: 308px;
+    padding: 14px;
+    background-color: var(--secondery-color);
+    border: none;
+    color: var(--base-color);
+    font-family: var(--main-font);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.uplaod_image_btn svg{
+    display: block;
+    fill: var(--base-color);
+    margin-left: 7px;
+}
+
+.data_section{
+    margin-left: 28px;
+    border-left: 1px var(--light-grey) solid;
+    flex: 1;
+    padding-left: 14px;
+}
+
+.input_wrapper{
+    margin-bottom: 28px;
+}
+
+.input_wrapper:last-child{
+    margin-bottom: 0px;
+}
+
+.input_wrapper input[type=text],.input_wrapper input[type=number]{
+    display: block;
+    width: calc(100% - 14px);
+    padding: 4px 7px;
+    border: 1px var(--light-grey) solid;
+    font-family: var(--main-font);
+    font-size: inherit;
+}
+
+.input_wrapper input[type=radio]{
+    display: inline-block;
+}
+
+.radio_label{
+    font-weight: 500;
+}
+
+.radio_label input{
+    margin-right: 7px;
+}
+
+.add_item_btn{
+    display: block;
+    width: 90px;
+    margin-left: auto;
+    padding: 7px;
+    background-color: var(--secondery-color);
+    border:none;
+    color: var(--base-color);
+}
+
+.add_color_btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    padding: 7px 0px;
+    background-color: var(--light-grey);
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.add_color_btn svg{
+    display: block;
+    margin-left: 7px;
+    width: 19px;
+    height: 19px;
+}
+
+.colors_btn_dropdown{
+    display: inline-block;
+    position: relative;
+}
+
+.colors_list{
+    display: none;
+    position: absolute;
+    height: 120px;
+    overflow-y: scroll;
+    background-color: var(--base-color);
+    border: 1px var(--light-grey) solid;
+}
+
+.color_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 125px;
+    border: none;
+    background-color: transparent;
+    padding: 4px 14px;
+    border-bottom: 1px var(--light-grey) solid;
+}
+
+.color_btn:last-child{
+    border-bottom: none;
+}
+
+.color_btn img{
+    width: 16px;
+    height: 16px;
+    object-fit: fill;
+    border: 1px #000 solid;
+}
+
+.add_color_btn:hover .colors_list{
+    display: block;
+}
+
+.selectedColors_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4px 0px;
+    cursor: grab;
+}
+
+.selectedColor{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border: 1px var(--light-grey) solid;
+    margin-right: 2px;
+}
+
+.selectedColor .color_image_box{
+    width: 16px;
+    height: 16px;
+    border: 1px #000 solid;
+    margin-left: 4px;
+}
+
+.delete_color_btn{
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    padding: 4px;
+    font-size: 9px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+    line-height: 4px;
+    background-color: var(--light-grey);
+}
+
+.form_controls{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.form_controls a{
+    display: block;
+    background-color: var(--light-grey);
+    padding: 14px;
+    width: 120px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form_controls button{
+    margin-left: 14px;
+}

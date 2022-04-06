@@ -1,0 +1,114 @@
+.search{
+    background-color: var(--base-color);
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 100%;
+    z-index: 5;
+}
+
+.search_input_wrapper{
+    display: flex;
+}
+
+.search_input_wrapper svg{
+    width: 36px;
+    height: 36px;
+    fill: var(--secondery-color);
+}
+
+.search_input_wrapper input[type=text]{
+    width: 100%;
+    border: none;
+    border-bottom: 2px var(--secondery-color) solid;
+    margin-left: 7px;
+    font-family: inherit;
+    font-size: 21px;
+}
+
+.search_input_wrapper input[type=text]::placeholder{
+    font-family: inherit;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.searched_products{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 9px 4px -4px rgba(0, 0, 0, 0.3);
+}
+
+.product{
+    position: relative;
+    margin: 10.3px 12.4px 0px 0px;
+}
+
+.product:nth-child(6n){
+    margin: 10.3px 0px 0px 0px;
+}
+
+.hidden_cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 215px;
+    height: 254px;
+    z-index: 2;
+    background-color: rgb(187, 187, 187 , 0.4);
+}
+
+.hidden_cover svg{
+    fill: var(--base-color);
+    width: 72px;
+    height: 72px;
+}
+
+.product_image_wrapper img{
+    width: 215px;
+    height: 215px;
+    object-fit: cover;
+}
+
+.product_details{
+    background-color: var(--light-grey);
+    padding: 7px 4px;
+    height: 39px;
+}
+
+.product_details .product_name{
+    font-family: var(--side-font);
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 9px;
+}
+
+.product_details .product_price{
+    font-family: var(--side-font);
+    font-weight: 200;
+    font-size: 14px;
+    text-align: right;
+    line-height: 16px;
+}
+
+.empty_searched_products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 9px 4px -4px rgba(0, 0, 0, 0.3);
+}
+
+.empty_searched_products svg{
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin-top: 14px;
+    fill: rgb(187, 187, 187 , 0.4);
+}
+
+.empty_searched_products p{
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(187, 187, 187 , 0.4);
+}

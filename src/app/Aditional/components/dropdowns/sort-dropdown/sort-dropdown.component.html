@@ -1,0 +1,15 @@
+<div class="dropdown_wrapper dropdown_wrapper_header" *ngIf="opened">
+    <ul>
+        <li>
+            <button (click)="onSort('SORT_N')" type="button" [class.active_sort] = "sortType === 'SORT_N'">Name</button>
+        </li>   
+
+        <li>
+            <button (click)="onSort('SORT_LH')" type="button" [class.active_sort] = "sortType === 'SORT_LH'">Price LOW to HIGH</button>
+        </li>
+
+        <li>
+            <button (click)="onSort('SORT_HL')" type="button" [class.active_sort] = "sortType === 'SORT_HL'">Price HIGH to LOW</button>
+        </li>
+    </ul>
+</div>

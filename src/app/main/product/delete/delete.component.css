@@ -1,0 +1,30 @@
+.pop_up_content{
+    width: 420px;
+    background-color: var(--base-color);
+    padding: 24px;
+}
+
+.pop_up_content p {
+    font-family: inherit;
+    margin-bottom: 14px;
+}
+
+.pop_up_controls button{
+    background-color: var(--light-grey);
+    border: none;
+    text-transform: uppercase;
+    font-family: var(--side-font);
+    padding: 14px;
+}
+
+.pop_up_controls{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pop_up_controls button:nth-child(2){
+    background-color: #d80000;
+    color: var(--base-color);
+    font-weight: bold;
+}

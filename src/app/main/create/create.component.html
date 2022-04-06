@@ -1,0 +1,93 @@
+<form (ngSubmit)="OnSubmit(addItemForm)" #addItemForm="ngForm">
+    <div class="create_content">
+        <div class="images_section">
+            <div class="image_preview_wrapper">
+                <img src="{{previewedImage}}" alt="product preview">
+            </div>
+    
+            <div class="selectedImages">
+                <div *ngFor="let selectedImagePreview of selectedImagesPreview ; index as i" class="selectedImage_wrapper">
+                    <button type="button" class="selectedImage" (click)="onSelectImagePreview(i)" [disabled]="loading">
+                        <img src="{{selectedImagesPreview[i]}}" alt="selected image">
+                    </button>
+                    <button type="button" class="delete_color_btn" (click)="onRemoveImage(i)" [disabled]="loading">x</button>
+                </div>
+            </div>
+    
+            <input type="file" (change)="onAddImage($event)" #fileUploader [disabled]="loading">
+            <div>
+                <button type="button" class="svg uplaod_image_btn" (click)="openFileUploader()" [disabled]="loading" [class.form_disabled_submit] = "loading">
+                    Upload image
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;" xml:space="preserve">
+                        <polygon points="42,20 22,20 22,0 20,0 20,20 0,20 0,22 20,22 20,42 22,42 22,22 42,22 "/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <div class="data_section">
+            <div class="input_wrapper">
+                <label for="name" class="requerired_input_label">Product name</label>
+                <input type="text" name="name" required ngModel [disabled]="loading" [class.form_disabled_input] = "loading">
+            </div>
+
+            <div class="input_wrapper">
+                <label for="price" class="requerired_input_label">Product price (USD)</label>
+                <input type="text" name="price" ngModel pattern="[0-9]*" required [disabled]="loading" [class.form_disabled_input] = "loading">
+            </div>
+
+            <div class="input_wrapper">
+                <label for="colors" class="requerired_input_label">Product colors</label>
+
+                <div class="selectedColors_wrapper">
+                    <div *ngFor="let selectedColor of selectedColors;index as i" class="selectedColor" draggable="true" (dragover)="onColorDrag($event)" (drop)="onColorDrop($event)" (mouseenter)="toColorSwap.firstIndex = i" [attr.colorIndex]="i">
+                        {{productColors[selectedColor].name}}
+                        <div style="background-image: url({{productColors[selectedColor].image}});" class="color_image_box"></div>
+
+                        <button type="button" class="delete_color_btn" (click)="onRemoveColor(selectedColor)" [disabled]="loading">x</button>
+                    </div>
+                </div>
+
+                <div class="colors_btn_dropdown" visible="false" dropdown>
+                    <button class="svg add_color_btn" type="button" [disabled]="loading">
+                        Add color
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;" xml:space="preserve">
+                            <polygon points="42,20 22,20 22,0 20,0 20,20 0,20 0,22 20,22 20,42 22,42 22,22 42,22 "/>
+                        </svg>
+                    </button>
+
+                    <div class="colors_list">
+                        <button *ngFor="let color of productColors ; index as i" type="button" (click)="onAddColor(i)" class="color_btn" [disabled]="loading">
+                            {{color.name}} 
+                            <img src="{{color.image}}" alt="color image">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input_wrapper">
+                <label for="target" class="requerired_input_label">Product target</label>
+                <div><label class="radio_label"><input type="radio" value="male" name="target" required ngModel [disabled]="loading">Male</label></div>
+                <div><label class="radio_label"><input type="radio" value="female" name="target" ngModel [disabled]="loading">Female</label></div>
+            </div>
+
+            <div class="input_wrapper">
+                <label for="privecy" class="requerired_input_label">Product privecy</label>
+                <div><label class="radio_label"><input type="radio" value="published" name="privecy" required ngModel [disabled]="loading">Published</label></div>
+                <div><label class="radio_label"><input type="radio" value="hidden" name="privecy" ngModel [disabled]="loading">Hidden</label></div>
+            </div>
+
+            <div class="svg_error form_error_wrapper" *ngIf="formError">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="796 698.08 200 200" enable-background="new 796 698.08 200 200" xml:space="preserve">
+                    <path d="M994.47,869.072L905.896,715.66c-2.041-3.535-5.813-5.713-9.896-5.713c-4.083,0-7.854,2.178-9.896,5.713l-88.573,153.412  c-2.041,3.536-2.041,7.892,0,11.427c2.041,3.536,5.813,5.714,9.896,5.714h177.147c4.083,0,7.854-2.178,9.896-5.714  C996.511,876.963,996.511,872.608,994.47,869.072z M896,870.253c-7.22,0-13.072-5.852-13.072-13.071  c0-7.221,5.852-13.072,13.072-13.072c7.221,0,13.072,5.852,13.072,13.072C909.072,864.402,903.221,870.253,896,870.253z   M910.58,765.235l-7.793,62.267c-0.469,3.748-3.889,6.407-7.637,5.938c-3.168-0.396-5.557-2.908-5.938-5.938l-7.793-62.267  c-1.007-8.053,4.703-15.397,12.755-16.405c8.053-1.007,15.397,4.703,16.405,12.756C910.732,762.8,910.719,764.072,910.58,765.235z"/>
+                </svg>
+                <p class="form_error">{{ formErrorText }}</p>
+            </div>
+
+            <div class="form_controls">
+                <a  *ngIf="!loading" routerLink="">Cancel</a>
+                <button type="submit" class="form_submit" [disabled]="loading" [class.form_disabled_submit] = "loading">Add item</button>
+            </div>
+        </div>
+    </div>    
+</form>

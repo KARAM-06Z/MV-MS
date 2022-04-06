@@ -1,0 +1,26 @@
+<div class="header">
+    <div class="header_left">
+        <a class="logo_holder" routerLink="" [queryParams]="{page:1}">
+            <img src="assets/images/mvmt_logo_white.png" alt="MVMT Logo">
+            <div>
+                <h6>MANAGEMENT</h6>
+                <h6>SYSTEM</h6>
+            </div>
+        </a>
+    </div>
+
+    <div class="header_right">
+        <ul>
+            <li>
+                <button class="svg_link header_link" (click)="onDropdown()" #headerDropdownController>
+                    ACCOUNT
+                    <svg fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <g><path d="M7 10l5 5 5-5"/></g>
+                    </svg>
+                </button>
+
+                <app-header-dropdown></app-header-dropdown>
+            </li>
+        </ul>
+    </div>
+</div>

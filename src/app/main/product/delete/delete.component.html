@@ -1,0 +1,10 @@
+<div class="pop-up-bck" (click)="onCancel($event)">
+    <div class="pop_up_content">
+        <p>This item will be permenantly deleted and it will never be restored, Confirm this action?</p>
+
+        <div class="pop_up_controls">
+            <button type="button" (click)="onCancel($event)">Cancel</button>
+            <button type="button" (click)="onConfirmDelete()">Confirm deletion</button>
+        </div>
+    </div>
+</div>

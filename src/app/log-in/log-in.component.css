@@ -1,0 +1,39 @@
+.form_label,.form_wrapper{
+    background-color: var(--base-color);
+}
+
+.form_label{
+    display: inline-block;
+    font-family: var(--side-font);
+    font-weight: bold;
+}
+
+.form_wrapper{
+    padding: 24px 12px;
+}
+
+.form_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    margin-bottom: 36px;
+}
+
+.input_wrapper{
+    margin-bottom: 48px;
+}
+
+.inputs_wrapper .input_wrapper:last-child{
+    margin-bottom: 24px;
+}
+
+input{
+    display: block;
+    border: 1px var(--light-grey) solid;
+    width: 480px;
+    padding: 7px;
+}
+
+button:hover{
+    text-decoration: underline;
+}
