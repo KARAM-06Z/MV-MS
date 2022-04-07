@@ -126,7 +126,7 @@ export class ProductComponent implements OnInit , OnDestroy{
     this.selectedImagesPreview.splice(i,1);
 
     if(this.selectedImagesPreview.length === 0){
-      this.previewedImage = "/assets/images/watch_BCK_grey.jpg";
+      this.previewedImage = "assets/images/watch_BCK_grey.jpg";
     }else{
       if(i == this.previewedImageIndex){
         if(i <= this.selectedImagesPreview.length-1){
