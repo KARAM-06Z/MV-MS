@@ -37,7 +37,7 @@ export class ProductComponent implements OnInit , OnDestroy{
   selectedImages:File[] = [];
   formError:boolean = false;
   formErrorText:string = "Error";
-  previewedImage:any = "/assets/images/watch_BCK_grey.jpg";
+  previewedImage:any = "assets/images/watch_BCK_grey.jpg";
   previewedImageIndex:number = 0;
   loading:boolean = false;
   editing:boolean = false;
