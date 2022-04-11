@@ -1,39 +1,99 @@
-.form_label,.form_wrapper{
-    background-color: var(--base-color);
-}
-
-.form_label{
-    display: inline-block;
-    font-family: var(--side-font);
-    font-weight: bold;
-}
-
 .form_wrapper{
-    padding: 24px 12px;
+    width: 460px;
+    background-color: var(--additional-white);
+    padding: 23px 16px;
+    border-radius: 4px;
 }
 
 .form_header{
     display: flex;
-    justify-content: space-between;
-    align-items: center ;
-    margin-bottom: 36px;
+}
+
+.form_header img{
+    width: 138px;
+    height: 29px;
+}
+
+.form_header div{
+    text-align: right;
+}
+
+.form_header div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.form_header div h6{
+    margin: 0;
+    display: inline;
+    font-family: var(--main-font);
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 8px;
+    user-select: none;
+}
+
+hr{
+    border-top: 1px var(--additional-black) solid;
+    margin: 12px 0px;
+}
+
+.form_label{
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 24px 0px 42px 0px;
+    text-transform: capitalize;
 }
 
 .input_wrapper{
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
-.inputs_wrapper .input_wrapper:last-child{
-    margin-bottom: 24px;
-}
-
-input{
+.input_wrapper label{
     display: block;
-    border: 1px var(--light-grey) solid;
-    width: 480px;
-    padding: 7px;
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 12px;
+    margin-bottom: 3px;
 }
 
-button:hover{
-    text-decoration: underline;
+.input_wrapper input{
+    width: 100%;
+    border: 1px var(--additional-black-light) solid;
+    border-radius: 2px;
+    padding: 2px 7px;
+}
+
+.form_submit_wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form_submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 12px;
+    border: none;
+    background-color: var(--secondery-color);
+    color: var(--additional-white);
+    border-radius: 2px;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form_submit span{
+    display: block;
+    margin-right: 16px;
+    font-family: var(--main-font);
+    font-size: 16px;
+    line-height: 12px;
+}
+
+.form_submit.svg svg{
+    fill:var(--additional-white)
 }

@@ -1,36 +1,48 @@
-<div class="pop-up-bck">
-    <div>
-        <div class="regestration_form pop-up-form">
-            <div class="form_wrapper">
-                <div class="form_header">
-                    <div class="form_label">LOG IN FORM</div>
+<div class="pop_up_bck">
+    <div class="regestration_form pop_up_container">
+        <div class="form_wrapper">
+            <div class="form_header">
+                <img src="assets/images/mvmt_logo.png" alt="MVMT Logo">
+                <div>
+                    <h6>MANAGEMENT</h6>
+                    <h6>SYSTEM</h6>
                 </div>
+            </div>
 
-                <form (ngSubmit)="OnSubmit(logInForm)" #logInForm="ngForm">
-                    <div class="inputs_wrapper">
-                        <div class="input_wrapper">
-                            <label for="email" class="requerired_input_label">E-mail</label>
-                            <input type="email" name="email" ngModel email required [disabled]="loading" [class.form_disabled_input] = "loading">
-                        </div>
-                
-                        <div class="input_wrapper">
-                            <label for="password" class="requerired_input_label">Password</label>
-                            <input type="password" name="password" ngModel required minlength="6" [disabled]="loading" [class.form_disabled_input] = "loading">
-                        </div>
-                    </div>
+            <hr>
 
-                    <div class="svg_error form_error_wrapper" *ngIf="formError">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="796 698.08 200 200" enable-background="new 796 698.08 200 200" xml:space="preserve">
-                            <path d="M994.47,869.072L905.896,715.66c-2.041-3.535-5.813-5.713-9.896-5.713c-4.083,0-7.854,2.178-9.896,5.713l-88.573,153.412  c-2.041,3.536-2.041,7.892,0,11.427c2.041,3.536,5.813,5.714,9.896,5.714h177.147c4.083,0,7.854-2.178,9.896-5.714  C996.511,876.963,996.511,872.608,994.47,869.072z M896,870.253c-7.22,0-13.072-5.852-13.072-13.071  c0-7.221,5.852-13.072,13.072-13.072c7.221,0,13.072,5.852,13.072,13.072C909.072,864.402,903.221,870.253,896,870.253z   M910.58,765.235l-7.793,62.267c-0.469,3.748-3.889,6.407-7.637,5.938c-3.168-0.396-5.557-2.908-5.938-5.938l-7.793-62.267  c-1.007-8.053,4.703-15.397,12.755-16.405c8.053-1.007,15.397,4.703,16.405,12.756C910.732,762.8,910.719,764.072,910.58,765.235z"/>
-                        </svg>
-                        <p class="form_error">{{ formErrorText }}</p>
+            <h3 class="form_label">Adminstration Log In</h3>
+
+            <form (ngSubmit)="OnSubmit(logInForm)" #logInForm="ngForm">
+                <div class="inputs_wrapper">
+                    <div class="input_wrapper">
+                        <label for="email" class="requerired_input_label">E-mail</label>
+                        <input type="email" name="email" ngModel email required [disabled]="loading" [class.form_disabled_input] = "loading">
                     </div>
             
-                    <div>
-                        <button class="form_submit" type="submit" [disabled]="loading" [class.form_disabled_submit] = "loading" #submit>LOG IN</button>
+                    <div class="input_wrapper">
+                        <label for="password" class="requerired_input_label">Password</label>
+                        <input type="password" name="password" ngModel required minlength="6" [disabled]="loading" [class.form_disabled_input] = "loading">
                     </div>
-                </form>
-            </div>
+                </div>
+
+                <div class="svg_error form_error_wrapper" *ngIf="formError">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="796 698.08 200 200" enable-background="new 796 698.08 200 200" xml:space="preserve">
+                        <path d="M994.47,869.072L905.896,715.66c-2.041-3.535-5.813-5.713-9.896-5.713c-4.083,0-7.854,2.178-9.896,5.713l-88.573,153.412  c-2.041,3.536-2.041,7.892,0,11.427c2.041,3.536,5.813,5.714,9.896,5.714h177.147c4.083,0,7.854-2.178,9.896-5.714  C996.511,876.963,996.511,872.608,994.47,869.072z M896,870.253c-7.22,0-13.072-5.852-13.072-13.071  c0-7.221,5.852-13.072,13.072-13.072c7.221,0,13.072,5.852,13.072,13.072C909.072,864.402,903.221,870.253,896,870.253z   M910.58,765.235l-7.793,62.267c-0.469,3.748-3.889,6.407-7.637,5.938c-3.168-0.396-5.557-2.908-5.938-5.938l-7.793-62.267  c-1.007-8.053,4.703-15.397,12.755-16.405c8.053-1.007,15.397,4.703,16.405,12.756C910.732,762.8,910.719,764.072,910.58,765.235z"/>
+                    </svg>
+                    <p class="form_error">{{ formErrorText }}</p>
+                </div>
+        
+                <div class="form_submit_wrapper">
+                    <button class="form_submit svg" type="submit" [disabled]="loading" [class.form_disabled_submit] = "loading" #submit>
+                        <span>log in</span>
+                        <svg  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M160,240H320V96a16,16,0,0,0-16-16H64A16,16,0,0,0,48,96V416a16,16,0,0,0,16,16H304a16,16,0,0,0,16-16V272H160Z"/>
+                            <path d="M459.31,244.69,368,153.37,345.37,176l64,64H320v32h89.37l-64,64L368,358.63l91.31-91.32a16,16,0,0,0,0-22.62Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
