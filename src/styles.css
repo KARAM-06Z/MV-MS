@@ -49,17 +49,16 @@ button:hover , button:focus-visible , a:hover , a:focus-visible{
 .pop_up_bck{
     display: block;
     position: absolute;
-    width: 100%;
     min-height: 100vh;
-    min-width: 480px;
+    min-width: 100vw;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 .pop_up_container{
-    display: grid;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    min-width: 100vw;
     min-height: 100vh;
 }
 
