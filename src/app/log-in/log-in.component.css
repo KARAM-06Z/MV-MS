@@ -28,8 +28,8 @@
     margin: 0;
     display: inline;
     font-family: var(--main-font);
-    font-size: 9px;
-    font-weight: 600;
+    font-size: 7px;
+    font-weight: 500;
     line-height: 8px;
     user-select: none;
 }
@@ -76,24 +76,21 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 7px 12px;
+    padding: 8px 10px;
     border: none;
     background-color: var(--secondery-color);
     color: var(--additional-white);
     border-radius: 2px;
-    font-family: var(--main-font);
-    font-size: 16px;
-    font-weight: 400;
 }
 
 .form_submit span{
     display: block;
-    margin-right: 16px;
     font-family: var(--main-font);
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 400;
     line-height: 12px;
 }
 
 .form_submit.svg svg{
-    fill:var(--additional-white)
+    fill:var(--additional-white);
 }

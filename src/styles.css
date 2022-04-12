@@ -12,7 +12,7 @@
 
 html, body {
     min-height: 100vh;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
 }
 
 :root{
@@ -32,8 +32,9 @@ html, body {
     flex-direction: column;
 }
 
+
 a,button{
-    color: #000000;
+    color: var(--additional-black);
     cursor: pointer;
     text-transform: uppercase !important;
 }
@@ -44,6 +45,26 @@ button:hover , button:focus-visible , a:hover , a:focus-visible{
 
 .page_content{
     padding-top: 84px;
+}
+
+.dropdown_wrapper{
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    background-color: var(--additional-white);
+    width: 270px;
+    z-index: 10;
+}
+
+.dropdown_wrapper ul{
+    list-style-type: none;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown_wrapper ul li button{
+    padding: 18px 12px;
 }
 
 .pop_up_bck{
@@ -68,6 +89,7 @@ button:hover , button:focus-visible , a:hover , a:focus-visible{
 
 .svg svg{
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
+    fill: var(--secondery-color);
 }

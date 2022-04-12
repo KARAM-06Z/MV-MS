@@ -1,8 +1,8 @@
 .footer{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: var(--secondery-color);
+    align-items: flex-end;
+    background-color: var(--additional-black);
     padding: 14px;
     text-transform: uppercase;
 }
@@ -18,8 +18,8 @@
 
 .site_arr{
     font-family: inherit;
-    font-size: 12px;
-    color: var(--base-color);
+    font-size: 9px;
+    color: var(--additional-white);
     margin: 0;
 }
 

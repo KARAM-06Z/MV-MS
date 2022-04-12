@@ -1,45 +1,40 @@
 <div>
     <div class="store_header">
-        <app-search></app-search>
-        
-        <hr>
+        <div class="search_wrapper svg">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 487.95 487.95" style="enable-background:new 0 0 487.95 487.95;" xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M481.8,453l-140-140.1c27.6-33.1,44.2-75.4,44.2-121.6C386,85.9,299.5,0.2,193.1,0.2S0,86,0,191.4s86.5,191.1,192.9,191.1    c45.2,0,86.8-15.5,119.8-41.4l140.5,140.5c8.2,8.2,20.4,8.2,28.6,0C490,473.4,490,461.2,481.8,453z M41,191.4    c0-82.8,68.2-150.1,151.9-150.1s151.9,67.3,151.9,150.1s-68.2,150.1-151.9,150.1S41,274.1,41,191.4z"/>
+                    </g>
+                </g>
+            </svg>
+            <input type="text" placeholder="Search...">
+
+            <app-search></app-search>
+        </div>
 
         <ul class="store_controls">
             <li>
-                <a class="svg add_new" routerLink="/Create">
-                    <span>Add product</span>
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;" xml:space="preserve">
-                        <polygon points="42,20 22,20 22,0 20,0 20,20 0,20 0,22 20,22 20,42 22,42 22,22 42,22 "/>
+                <a class="svg" routerLink="/Create">
+                    <span>Create New</span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M384,283.429H283.429V384    h-54.857V283.429H128v-54.857h100.571V128h54.857v100.571H384V283.429z"/>
+                            </g>
+                        </g>
                     </svg>
                 </a>
             </li>
             <li>
                 <button class="svg" (click)="onDropdown()" #sortDropdownController>
                     <span>Sort by</span>
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 489.389 489.389" style="enable-background:new 0 0 489.389 489.389;" xml:space="preserve">
-                        <g>
-                            <g>
-                                <path d="M261.294,326.102c-8.3-7.3-21.8-6.2-29.1,2.1l-77,86.8v-346.9c0-11.4-9.4-20.8-20.8-20.8s-20.8,9.4-20.8,20.8v346.9    l-77-86.8c-8.3-8.3-20.8-9.4-29.1-2.1c-8.3,8.3-9.4,20.8-2.1,29.1l113.4,126.9c8.5,10.5,23.5,8.9,30.2,0l114.4-126.9    C270.694,347.002,269.694,333.402,261.294,326.102z"/>
-                                <path d="M483.994,134.702l-112.4-126.9c-10-10.1-22.5-10.7-31.2,0l-114.4,126.9c-7.3,8.3-6.2,21.8,2.1,29.1    c12.8,10.2,25.7,3.2,29.1-2.1l77-86.8v345.9c0,11.4,9.4,20.8,20.8,20.8s20.8-8.3,20.8-19.8v-346.8l77,86.8    c8.3,8.3,20.8,9.4,29.1,2.1C490.194,155.502,491.294,143.002,483.994,134.702z"/>
-                            </g>
-                        </g>
+                    <svg  viewBox="0 0 1024 1024"  xmlns="http://www.w3.org/2000/svg">
+                        <path d="M384 96a32 32 0 0164 0v786.752a32 32 0 01-54.592 22.656L95.936 608a32 32 0 010-45.312h.128a32 32 0 0145.184 0L384 805.632V96zm192 45.248a32 32 0 0154.592-22.592L928.064 416a32 32 0 010 45.312h-.128a32 32 0 01-45.184 0L640 218.496V928a32 32 0 11-64 0V141.248z"/>
                     </svg>
                 </button>
 
                 <app-sort-dropdown></app-sort-dropdown>
-            </li>
-
-            <li>
-                <button class="svg" (click)="onSearch()">
-                    <span>Search</span>
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 487.95 487.95" style="enable-background:new 0 0 487.95 487.95;" xml:space="preserve">
-                        <g>
-                            <g>
-                                <path d="M481.8,453l-140-140.1c27.6-33.1,44.2-75.4,44.2-121.6C386,85.9,299.5,0.2,193.1,0.2S0,86,0,191.4s86.5,191.1,192.9,191.1    c45.2,0,86.8-15.5,119.8-41.4l140.5,140.5c8.2,8.2,20.4,8.2,28.6,0C490,473.4,490,461.2,481.8,453z M41,191.4    c0-82.8,68.2-150.1,151.9-150.1s151.9,67.3,151.9,150.1s-68.2,150.1-151.9,150.1S41,274.1,41,191.4z"/>
-                            </g>
-                        </g>
-                    </svg>
-                </button>
             </li>
         </ul>
     </div>
@@ -48,7 +43,27 @@
         <div *ngIf="!loading">
             <div class="products_wrapper">
                 <a *ngFor="let product of products ; index as i" class="product" routerLink="/Product/{{product.productKey}}">
-                    <div class="hidden_cover" *ngIf="product.privecy === 'hidden'">
+                    <div class="product_data">
+                        <div class="product_image_wrapper">
+                            <img src="{{product.imagesURL[0]}}" alt="" (mouseover)="onImageSwap($event,i)" (mouseout)="onImageRestore($event,i)">
+        
+                            <!-- <div class="colors_wrapper">
+                                <img *ngFor="let color of product.colors ; index as i" src="{{productColors[color].image}}" alt="">
+                            </div> -->
+                        </div>
+        
+                        <div>
+                            <h3 class="product_name">{{product.name}}</h3>
+                        </div>
+    
+                        <div class="product_info">
+                            <span class="product_price">{{product.price}}$</span>
+                            <span>|</span>
+                            <span class="product_target" *ngIf="product.target == 'male'">M</span>
+                            <span class="product_target" *ngIf="product.target == 'female'">F</span>
+                        </div>
+                    </div>
+                    <!-- <div class="hidden_cover" *ngIf="product.privecy === 'hidden'">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="98.48px" height="98.481px" viewBox="0 0 98.48 98.481" style="enable-background:new 0 0 98.48 98.481;" xml:space="preserve">
                             <g>
                                 <g>
@@ -58,26 +73,7 @@
                                 </g>
                             </g>
                         </svg>
-                    </div>
-                    <div class="product_image_wrapper">
-                        <img src="{{product.imagesURL[0]}}" alt="" (mouseover)="onImageSwap($event,i)" (mouseout)="onImageRestore($event,i)">
-    
-                        <div class="colors_wrapper">
-                            <img *ngFor="let color of product.colors ; index as i" src="{{productColors[color].image}}" alt="">
-                        </div>
-                    </div>
-    
-                    <div class="product_info_wrapper">
-                        <div>
-                            <h3 class="product_name">{{product.name}}</h3>
-                        </div>
-    
-                        <div class="product_info_right">
-                            <span class="product_price">{{product.price}}$</span>
-                            <span class="product_target" *ngIf="product.target == 'male'">M</span>
-                            <span class="product_target" *ngIf="product.target == 'female'">F</span>
-                        </div>
-                    </div>
+                    </div> -->
                 </a>
             </div>
     
