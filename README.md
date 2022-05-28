@@ -50,7 +50,6 @@
     <div  align="center">
       <img src="">
     </div>
-    
     <p>Other pages are still on the work</p>
     <p>There is also more updates like adding a warnning/error indicator</p>
     <div  align="center">
