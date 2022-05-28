@@ -10,8 +10,8 @@
       It is about a products managment in a watches store, it can view items in the store, add, edit and delete all in an easy to use one page web app.
     </p>
     <p>
-      This project is completely open to anyone to use on the github live page, this might be idiotic but it is fine for as long as the project 
-      is really a test for my self as well as the code is safe on my account.
+      This project is completely open to anyone to use on the github live page, this might be idiotic but it is fine for me as long as the project 
+      is really a test for myself as well as the code is safe on my account.
     </p>
   </div>
 </section>
