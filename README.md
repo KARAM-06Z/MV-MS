@@ -40,7 +40,7 @@
   <div>
     <h2>Updates</h2>
     <p>
-      The next step for the website is to reinnovate it's design and it is on the work, the following image represents how the website will look like once the work is done.
+      The next step for the website is to reinnovate it's design and it is on the work, the following images represents how the website will look like once the work is done.
     </p>
     <h4>Login page</h4>
     <div  align="center">
@@ -50,7 +50,7 @@
     <div  align="center">
       <img src="">
     </div>
-    <p>Other pages are still on the work</p>
+    <p>Other pages are still on the work.</p>
     <p>There is also more updates like adding a warnning/error indicator</p>
     <div  align="center">
       <img src="">
