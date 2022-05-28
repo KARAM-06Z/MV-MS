@@ -55,6 +55,6 @@
     <div  align="center">
       <img src="">
     </div>
-    <p>as well as bug fixes and adding features if necessary</p>
+    <p>as well as bug fixes like fixing the vairaible that contains colors it will keep the edited colors when clicking on cancel edit instead of viewing back the original colors before the edit and adding features if necessary like creating other account and the auto logout feature.</p>
   </div>
 </section>
