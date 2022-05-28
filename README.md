@@ -44,16 +44,16 @@
     </p>
     <h4>Login page</h4>
     <div  align="center">
-      <img src="">
+      <img src="src/assets/mvms_figma/MVMT_NEW_[LOG IN].png">
     </div>
     <h4>Main page</h4>
     <div  align="center">
-      <img src="">
+      <img src="src/assets/mvms_figma/MVMT_NEW_[PRODUCTS].png">
     </div>
     <p>Other pages are still on the work.</p>
     <p>There is also more updates like adding a warnning/error indicator</p>
     <div  align="center">
-      <img src="">
+      <img src="src/assets/mvms_figma/MVMT_NEW_[ERRORS].png">
     </div>
     <p>as well as bug fixes like fixing the variable that contains colors it will keep the edited colors when clicking on cancel edit instead of viewing back the original colors before the edit and adding features if necessary like creating other accounts and the auto logout feature.</p>
   </div>
