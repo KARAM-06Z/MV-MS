@@ -23,7 +23,7 @@
       By going to the live page on github at the following <a href="https://karam-06z.github.io/mvms/" target="_blank">link</a> you can run the app which will show you a Login page where you can enter only the admin account.
     </p>
     <p>
-      There is only one account to mimic the idea that this is a site for authorized members who only have anything related to the store based on the store owner knowledge.
+      There is only one account to mimic the idea that this is a site for authorized members who only have anything related to the store, based on the store owner knowledge.
     </p>
     <p>
       The admin account is the only way to create other accounts but this idea can't be found in the site because this was not what I'm focusing on, of course it can be made at anytime.
